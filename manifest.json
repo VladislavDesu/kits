@@ -1,0 +1,19 @@
+{
+	"lang": "ru",
+	"name": "Моё приложение",
+	"description": "Описание приложения",
+	"icons": [{
+		"src": "/icon.png",
+		"sizes": "64x64",
+		"type": "image/png"
+	}],
+	"start_url": "/",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#000000",
+	"screenshots": [{
+		"src": "/screenshots.jpg",
+		"sizes": "640x480",
+		"type": "image/jpeg"
+	}]
+}

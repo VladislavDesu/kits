@@ -1,0 +1,21 @@
+.test {
+   @media (min-width: 768px) {
+      width: 100%;
+   }
+
+   &--md {
+      width: 50%;
+   }
+}
+
+.red {
+   color: red;
+
+   @media (min-width: 768px) {
+      width: 100%;
+   }
+
+   &--blue {
+      width: 50%;
+   }
+}
