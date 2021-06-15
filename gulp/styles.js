@@ -9,7 +9,7 @@ const gulp = require("gulp"),
    hash = require("gulp-hash"),
    rename = require("gulp-rename");
 
-module.exports = () => {
+const styles = () => {
    return (
       gulp
          .src("src/*.scss")
@@ -56,3 +56,5 @@ module.exports = () => {
       // .pipe(browserSync.stream());
    );
 };
+
+module.exports = styles;

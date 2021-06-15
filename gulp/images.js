@@ -2,7 +2,7 @@ const gulp = require("gulp"),
    imagemin = require("gulp-imagemin"),
    webp = require("gulp-webp");
 
-module.exports = () => {
+const images = () => {
    return gulp
       .src("src/images/**/*")
       .pipe(
@@ -39,7 +39,6 @@ module.exports = () => {
             }),
          ])
       )
-
       .pipe(gulp.dest("build/images/"))
       .pipe(gulp.src("src/images/**/*"))
       .pipe(
@@ -51,3 +50,5 @@ module.exports = () => {
       .pipe(gulp.dest("build/images/"));
    // .pipe(browserSync.stream());
 };
+
+module.exports = images;

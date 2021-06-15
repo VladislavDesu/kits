@@ -2,7 +2,7 @@ const gulp = require("gulp"),
    ttf2woff = require("gulp-ttf2woff"),
    ttf2woff2 = require("gulp-ttf2woff2");
 
-module.exports = () => {
+const fonts = () => {
    return gulp
       .src("src/fonts/**/*")
       .pipe(gulp.dest("build/fonts"))
@@ -13,3 +13,5 @@ module.exports = () => {
       .pipe(gulp.dest("build/fonts"));
    // .pipe(browserSync.stream());
 };
+
+module.exports = fonts;
