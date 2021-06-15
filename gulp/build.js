@@ -5,8 +5,9 @@ const styles = require("./styles"),
    images = require("./images"),
    server = require("./server"),
    clean = require("./clean"),
-   scripts = require("./scripts");
+   scripts = require("./scripts"),
+   layout = require("./layout");
 
-const starter = gulp.series(styles, fonts, images, scripts);
+const starter = gulp.series(fonts, images, styles, scripts, layout);
 
 module.exports = gulp.series(clean, starter, server);

@@ -1,20 +1,24 @@
-const paths = {
+const path = {
    src: {
-      html: "src/**/*.html",
-      css: "src/css",
+      layout: "src/layout/**/*.pug",
       styles: "src/styles/**/*.+(scss|sass|less)",
-      images: "src/images/**/*.{png,jpg}",
-      icons: "src/icons/**/*.svg",
+      images: "src/images/**/*.{png,jpg,gif,svg}",
       scripts: "src/scripts/**/*.js",
       fonts: "src/fonts/**/*.ttf",
    },
 
+   project: {
+      root: "./",
+   },
+
    build: {
-      root: "docs/",
-      css: "docs/css/",
-      images: "docs/images/",
-      icons: "docs/icons/",
-      scripts: "docs/scripts/",
-      fonts: "docs/fonts/",
+      root: "build/",
+      styles: "build/styles/",
+      images: "build/images/",
+      scripts: "build/scripts/",
+      fonts: "build/fonts/",
+      layout: "build/layout/",
    },
 };
+
+module.exports = path;

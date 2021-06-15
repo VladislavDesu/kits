@@ -2,9 +2,11 @@ const gulp = require("gulp"),
    rename = require("gulp-rename"),
    uglify = require("gulp-uglify");
 
+const path = require("./path");
+
 const scripts = () => {
    return gulp
-      .src("src/scripts/**/*")
+      .src(path.src.scripts)
       .pipe(
          uglify()
          //    {
@@ -16,7 +18,7 @@ const scripts = () => {
             suffix: ".min",
          })
       )
-      .pipe(gulp.dest("build/scripts/"));
+      .pipe(gulp.dest(path.build.scripts));
    // .pipe(browserSync.stream());
 };
 

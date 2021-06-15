@@ -9,10 +9,12 @@ const gulp = require("gulp"),
    hash = require("gulp-hash"),
    rename = require("gulp-rename");
 
+const path = require("./path");
+
 const styles = () => {
    return (
       gulp
-         .src("src/*.scss")
+         .src(path.src.styles)
          .pipe(sourcemaps.init())
          .pipe(plumber())
          .pipe(
@@ -31,7 +33,7 @@ const styles = () => {
             ])
          )
 
-         .pipe(gulp.dest("build/styles"))
+         .pipe(gulp.dest(path.build.styles))
          .pipe(
             cleanCSS((details) => {
                console.log(
@@ -47,7 +49,7 @@ const styles = () => {
          .pipe(sourcemaps.write(""))
          // ПРОВЕРИТЬ ПОДКЛЮЧЕНИЕ (КАК РАБОТАЕТ) ЕСЛИ ЧТО РАЗДЕЛИТЬ НА ПРОД И БИЛД ИЛИ STYLES И STYLES-MIN
          .pipe(hash({ template: "<%= name %>-<%= hash %>.min<%= ext %>" }))
-         .pipe(gulp.dest("build/styles"))
+         .pipe(gulp.dest(path.build.styles))
          .pipe(
             hash.manifest("manifest.json", {
                deleteOld: true,
