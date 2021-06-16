@@ -1,14 +1,12 @@
-// const browserSync = require("browser-sync").create();
-//    htmlmin = require("gulp-htmlmin"),
-//    posthtml = require("gulp-posthtml"),
-//    include = require("posthtml-include"),
-
-// const extender = require("gulp-html-extend");
-// const htmlhint = require("gulp-htmlhint");
-// const less = require("gulp-less");
-// const uglify = require("gulp-uglify");
-
-const gulp = require("gulp");
-const build = require("./gulp/build");
-
-gulp.task("default", build);
+tasks = require("./gulp/tasks");
+path = require("./gulp/path");
+require("./gulp/dependencies");
+require("./gulp/tasks/clean");
+require("./gulp/tasks/fonts");
+require("./gulp/tasks/images");
+require("./gulp/tasks/styles");
+require("./gulp/tasks/scripts");
+require("./gulp/tasks/layout");
+require("./gulp/tasks/server");
+require("./gulp/tasks/dev");
+require("./gulp/tasks/default");

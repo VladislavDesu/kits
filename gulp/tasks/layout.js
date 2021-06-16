@@ -1,14 +1,7 @@
-const gulp = require("gulp"),
-   pug = require("gulp-pug"),
-   browserSync = require("browser-sync").create();
-// const htmlValidator = require('gulp-w3c-html-validator')
-
-const path = require("./path");
-
-const layout = () => {
+module.exports = gulp.task("layout", () => {
    return (
       gulp
-         .src(path.src.layout)
+         .src(path.dev.layout)
          // plumber
          .pipe(pug({ pretty: true }))
          // .pipe(htmlValidator())
@@ -22,8 +15,5 @@ const layout = () => {
          // .pipe(htmlhint.reporter())
          // .pipe(htmlhint.failAfterError())
          .pipe(gulp.dest(path.build.layout))
-         .pipe(browserSync.stream())
    );
-};
-
-module.exports = layout;
+});

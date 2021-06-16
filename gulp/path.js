@@ -1,24 +1,22 @@
-const path = {
-   src: {
-      layout: "src/layout/**/*.pug",
-      styles: "src/styles/**/*.+(scss|sass|less)",
-      images: "src/images/**/*.{png,jpg,gif,svg}",
-      scripts: "src/scripts/**/*.js",
-      fonts: "src/fonts/**/*.ttf",
+module.exports = {
+   dev: {
+      layout: "dev/layout/**/*.pug",
+      styles: "dev/styles/**/*.+(scss|sass|less)",
+      images: "dev/images/**/*.{png,jpg,gif,svg}",
+      scripts: "dev/scripts/**/*.js",
+      fonts: "dev/fonts/**/*.ttf",
    },
 
-   project: {
-      root: "./",
+   server: {
+      baseDir: "./build",
    },
 
    build: {
       root: "build/",
+      layout: "build/layout/",
       styles: "build/styles/",
       images: "build/images/",
       scripts: "build/scripts/",
       fonts: "build/fonts/",
-      layout: "build/layout/",
    },
 };
-
-module.exports = path;

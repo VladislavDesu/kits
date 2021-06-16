@@ -1,20 +1,7 @@
-const gulp = require("gulp"),
-   scss = require("gulp-sass"),
-   postcss = require("gulp-postcss"),
-   autoprefixer = require("autoprefixer"),
-   mqpacker = require("css-mqpacker"),
-   cleanCSS = require("gulp-clean-css"),
-   plumber = require("gulp-plumber"),
-   sourcemaps = require("gulp-sourcemaps"),
-   hash = require("gulp-hash"),
-   rename = require("gulp-rename");
-
-const path = require("./path");
-
-const styles = () => {
+module.exports = gulp.task("styles", () => {
    return (
       gulp
-         .src(path.src.styles)
+         .src(path.dev.styles)
          .pipe(sourcemaps.init())
          .pipe(plumber())
          .pipe(
@@ -48,15 +35,12 @@ const styles = () => {
          )
          .pipe(sourcemaps.write(""))
          // ПРОВЕРИТЬ ПОДКЛЮЧЕНИЕ (КАК РАБОТАЕТ) ЕСЛИ ЧТО РАЗДЕЛИТЬ НА ПРОД И БИЛД ИЛИ STYLES И STYLES-MIN
-         .pipe(hash({ template: "<%= name %>-<%= hash %>.min<%= ext %>" }))
+         // .pipe(hash({ template: "<%= name %>-<%= hash %>.min<%= ext %>" }))
          .pipe(gulp.dest(path.build.styles))
-         .pipe(
-            hash.manifest("manifest.json", {
-               deleteOld: true,
-            })
-         )
-      // .pipe(browserSync.stream());
+      // .pipe(
+      //    hash.manifest("manifest.json", {
+      //       deleteOld: true,
+      //    })
+      // )
    );
-};
-
-module.exports = styles;
+});

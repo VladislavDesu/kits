@@ -1,12 +1,6 @@
-const gulp = require("gulp"),
-   imagemin = require("gulp-imagemin"),
-   webp = require("gulp-webp");
-
-const path = require("./path");
-
-const images = () => {
+module.exports = gulp.task("images", () => {
    return gulp
-      .src(path.src.images)
+      .src(path.dev.images)
       .pipe(
          imagemin([
             imagemin.optipng({
@@ -42,7 +36,7 @@ const images = () => {
          ])
       )
       .pipe(gulp.dest(path.build.images))
-      .pipe(gulp.src(path.src.images))
+      .pipe(gulp.src(path.dev.images))
       .pipe(
          webp({
             quality: 100,
@@ -50,7 +44,4 @@ const images = () => {
          })
       )
       .pipe(gulp.dest(path.build.images));
-   // .pipe(browserSync.stream());
-};
-
-module.exports = images;
+});
