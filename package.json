@@ -60,7 +60,7 @@
   },
   "lint-staged": {
     "linters": {
-      "*.css": ["stylelint --fix --config ./.stylelintrc-format", "csscomb build/styles/*.css", "git add"]
+      "*.scss": ["npm run lint:style-fix", "csscomb build/styles/*.css", "git add"]
     }
   }
 }
