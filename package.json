@@ -10,6 +10,7 @@
     "lint:style-fix": "stylelint \"dev/styles/**/*\" --syntax=scss --fix",
     "lint:js": "eslint dev/scripts/**/*.js",
     "lint:js-fix": "eslint dev/scripts/**/*.js --fix",
+    "lint:html": "npx htmlhint \"build/layout/**/*.html\"",
     "start": "gulp dev",
     "build": "gulp build"
   },
@@ -24,6 +25,7 @@
     "autoprefixer": "^10.2.6",
     "browser-sync": "^2.26.14",
     "css-mqpacker": "^6.0.2",
+    "csscomb": "^4.3.0",
     "del": "^6.0.0",
     "eslint": "^7.28.0",
     "eslint-config-htmlacademy": "^4.0.1",
@@ -41,14 +43,30 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^3.0.0",
+    "htmlhint": "^0.15.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "postcss": "^8.3.4",
+    "prettier": "^2.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.10",
     "stylelint-order-htmlacademy": "^2.0.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm lint"
+      "pre-commit": "lint-staged --relative"
     }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "prettier --write --config .prettierr.yaml",
+      "tslint --project tslint.ide_only.json --fix --force",
+      "sh lint.sh partner-account",
+      "git add"
+    ],
+    "*.{html,scss,css}": [
+      "prettier --write --config .prettierr.yaml",
+      "git add"
+    ]
   }
 }
