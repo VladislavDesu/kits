@@ -48,7 +48,6 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.4",
-    "prettier": "^2.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.10",
     "stylelint-order-htmlacademy": "^2.0.3"
@@ -60,7 +59,11 @@
   },
   "lint-staged": {
     "linters": {
-      "*.scss": ["npm run lint:style-fix", "csscomb build/styles/*.css", "git add"]
+      "*.scss": [
+        "npm run lint:style-fix",
+        "csscomb build/styles/*.css",
+        "git add"
+      ]
     }
   }
 }
