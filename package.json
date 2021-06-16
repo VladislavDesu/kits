@@ -4,7 +4,19 @@
   "description": "starter template for frontend development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint-fix": "npm run lint:style-fix && npm run lint:js-fix",
+    "lint:style": "stylelint \"dev/styles/**/*\" --syntax=scss",
+    "lint:style-fix": "stylelint \"dev/styles/**/*\" --syntax=scss --fix",
+    "lint:js": "eslint dev/scripts/**/*.js",
+    "lint:js-fix": "eslint dev/scripts/**/*.js --fix",
+    "start": "gulp dev",
+    "build": "gulp build"
+  },
+  "standart": {
+    "ignore": [
+      "./node_modules"
+    ]
   },
   "author": "Vladislav Gryadko (vgryadko@gmail.com)",
   "license": "ISC",
@@ -13,6 +25,8 @@
     "browser-sync": "^2.26.14",
     "css-mqpacker": "^6.0.2",
     "del": "^6.0.0",
+    "eslint": "^7.28.0",
+    "eslint-config-htmlacademy": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-hash": "^4.2.2",
@@ -27,6 +41,14 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^3.0.0",
-    "postcss": "^8.3.4"
+    "postcss": "^8.3.4",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.10",
+    "stylelint-order-htmlacademy": "^2.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
   }
 }
