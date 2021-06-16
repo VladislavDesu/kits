@@ -13,7 +13,8 @@
     "lint:html": "npx htmlhint \"build/layout/**/*.html\"",
     "csscomb": "csscomb build/styles/*.css",
     "start": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepare": "husky install"
   },
   "standart": {
     "ignore": [
