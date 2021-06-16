@@ -11,6 +11,7 @@
     "lint:js": "eslint dev/scripts/**/*.js",
     "lint:js-fix": "eslint dev/scripts/**/*.js --fix",
     "lint:html": "npx htmlhint \"build/layout/**/*.html\"",
+    "csscomb": "csscomb build/styles/*.css",
     "start": "gulp dev",
     "build": "gulp build"
   },
@@ -54,19 +55,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{ts,js}": [
-      "prettier --write --config .prettierr.yaml",
-      "tslint --project tslint.ide_only.json --fix --force",
-      "sh lint.sh partner-account",
-      "git add"
-    ],
-    "*.{html,scss,css}": [
-      "prettier --write --config .prettierr.yaml",
-      "git add"
-    ]
+    "linters": {
+      "*.css": ["stylelint --fix --config ./.stylelintrc-format", "csscomb build/styles/*.css", "git add"]
+    }
   }
 }
