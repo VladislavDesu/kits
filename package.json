@@ -13,7 +13,8 @@
     "lint:html": "npx htmlhint \"build/layout/**/*.html\"",
     "csscomb": "csscomb build/styles/*.css",
     "start": "gulp dev",
-    "build": "gulp build",
+    "build": "gulp",
+    "webp": "gulp images-webp",
     "prepare": "husky install"
   },
   "standart": {
@@ -34,6 +35,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-hash": "^4.2.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
