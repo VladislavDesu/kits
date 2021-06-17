@@ -1,3 +1,5 @@
+- var cssStyle = "../styles/" + (styles || "styles.min.css");
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -5,7 +7,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
-    link(rel="stylesheet" href="../styles/styles.min.css")
+    link(rel="stylesheet" href=cssStyle)
 
   body
     | lorem ipsum

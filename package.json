@@ -14,6 +14,7 @@
     "csscomb": "csscomb build/styles/*.css",
     "start": "gulp dev",
     "build": "gulp",
+    "prod": "gulp --prod",
     "webp": "gulp images-webp",
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint\""
   },
@@ -36,7 +37,9 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-hash": "^4.2.2",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-pug": "^5.0.0",
@@ -52,6 +55,7 @@
     "postcss": "^8.3.4",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.10",
-    "stylelint-order-htmlacademy": "^2.0.3"
+    "stylelint-order-htmlacademy": "^2.0.3",
+    "yargs": "^15.4.1"
   }
 }

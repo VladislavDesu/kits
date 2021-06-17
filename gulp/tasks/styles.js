@@ -1,12 +1,20 @@
 module.exports = gulp.task("styles", () => {
+  function isLess(file) {
+    return file.extname === ".less";
+  }
+
   return gulp
     .src(path.dev.styles)
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(
-      scss({
-        outputStyle: "expanded",
-      }).on("error", scss.logError)
+      gulpif(
+        isLess,
+        less(),
+        sass({
+          outputStyle: "expanded",
+        }).on("error", sass.logError)
+      )
     )
     .pipe(
       postcss([
@@ -18,13 +26,15 @@ module.exports = gulp.task("styles", () => {
         }),
       ])
     )
-    .pipe(gulp.dest(path.build.styles))
     .pipe(
-      cleanCSS((details) => {
-        console.log(
-          `${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`
-        );
-      })
+      gulpif(
+        argv.prod,
+        cleanCSS((details) => {
+          console.log(
+            `${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`
+          );
+        })
+      )
     )
     .pipe(
       rename({
