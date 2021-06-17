@@ -15,7 +15,7 @@
     "start": "gulp dev",
     "build": "gulp",
     "webp": "gulp images-webp",
-    "prepare": "husky install"
+    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint\""
   },
   "standart": {
     "ignore": [

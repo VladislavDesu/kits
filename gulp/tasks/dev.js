@@ -1,1 +1,12 @@
-module.exports = gulp.task("dev", gulp.series(...tasks.tasksDev));
+module.exports = gulp.task(
+  "dev",
+  gulp.series(
+    "clean",
+    "fonts",
+    "images",
+    "styles",
+    "scripts",
+    "layout",
+    "server"
+  )
+);

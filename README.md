@@ -3,19 +3,12 @@
 # Технологии
 
 ```bash
-- Чистый **`HTML5`**
-- Sematic layout
-- Adaptive and Responsive layout
-- Methodology **`BEM`**
-- CSS preprocessor **`SCSS`**
-- Native **`JavaScript`**
-- Task runner **`Gulp`**
+- BEM
+- Gulp
+- Pug
+- Scss, Sass, Less
+- JavaScript
 ```
-
-## Общее
-
-- BEM (именование классов), Gulp Scss, Pug;
-- Используется код-гайд [htmlacademy](https://codeguide.academy/).
 
 ## Файловая структура
 
@@ -28,6 +21,7 @@ dev/       # Папка с исходниками для разработки
 
 ```bash
 npm i                  # Установка всех необходимых зависимостей
+npm run prepare        # Установка и настройка husky (Уже есть в проекте)
 npm start              # Запуск проекта с сервером (либо команда gulp dev)
 npm run build          # Запуск проекта без сервера (либо команда gulp)
 npm run webp           # Конвертация картинок в формат Webp
@@ -61,6 +55,10 @@ npm run lint:js-fix    # Исправление только js файлов
 8. При внесении изменений, страница автоматически перезагружается.
 9. Для генерации изображений в формате `.webp` необходимо запустить задачу `npm run webp`. Изображения создаются на основе исходный файлов в папке `dev/images/` и сохраняются в папку `build/images`.
 
+При `npm run build` запускается gulp задача - default:
+
+1. Запускается всё тоже самое что и у задачи dev только без поднятия сервера.
+
 <!-- ## Разметка
 
 Повторяющиеся части (такие, как header и footer) располагаются в `src/html/parts/`.
@@ -79,7 +77,11 @@ npm run lint:js-fix    # Исправление только js файлов
 - `src/less/other/` - (опционально) стили, не соответствующие категориям выше (анимация, которая используется для нескольких независимых блоков, классы хелперы и т.д.).
 - `src/less/template.less` - главный стилевой файл, в который импортируются все компоненты. -->
 
-### Стилевой код-гайд по BEM
+### Стилевой код-гайд
+
+Используется код-гайд [htmlacademy](https://codeguide.academy/).
+
+### BEM
 
 1. БЭМ-именование: `__` — разделитель элемента, `--` — разделитель модификатора.
 2. Для каждого блока создается отдельный файл стилей.
@@ -104,36 +106,20 @@ npm run lint:js-fix    # Исправление только js файлов
 
 Для проверки кода на ошибки и соответствие код-гайдам используются конфиги [htmlacademy](https://github.com/htmlacademy/codeguide).
 
-`.eslintrc` - конфиг для проверки js [eslint](https://eslint.org/).  
-`.eslintignore` - здесь указываются файлы/папки, которые будут игнорироваться.  
+`.eslintrc` - конфиг для проверки js [eslint](https://eslint.org/).
+
+<!-- `.eslintignore` - здесь указываются файлы/папки, которые будут игнорироваться.   -->
+
 `.htmlhintrc` - конфиг для проверки html [htmlhint](https://htmlhint.com/).  
-`.stylelintrc` - конфиг для проверки less [stylelint](https://stylelint.io/).
+`.stylelintrc` - конфиг для проверки (less, scss, sass) [stylelint](https://stylelint.io/).
 
-# Installation
+## Gulp
 
-- Install this repository to your device.
-- Open it in any Text Editor and run **`npm i`** in your console (for download all packages). You can find a list of all packages in the [package.json](https://github.com/VladislavDesu/koroka-solutions-test/blob/master/package.json) file.
-- You can build project by running **`npm run build`** code.
-- You can also run **`npm run start`** code, then project will also build, but also start a local server ([Browsersync](https://browsersync.io/)), for comfortable project review or development.
+- Папка gulp:
 
-# Structure & Navigation
+  - Папка tasks - папка со всеми задачами для gulp сборщика
+  - Файл dependencies - массив со всеми зависимостями
+  - Файл path - обьект с путями по проекту
 
-## Folders
-
-The project consists of two main folders [src](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/src) and [build](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/build).
-
-## Gulpfile.js
-
-I used [Gulp](https://gulpjs.com/) to Develop and Build this project. All gulp's tasks you can find in the [gulpfile.js](https://github.com/VladislavDesu/koroka-solutions-test/blob/master/gulpfile.js) file.
-
-All styles were created by **`SCSS`** code, you can find all source styles in [src/styles](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/src/styles) folder, **`Gulp`** converted all **`SCSS`** files into one build and minify **`CSS`** file ([build/css](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/build/css)).
-
-All images and icons minify by **`Gulp`** task, you can find all images and icons in [src](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/src) folder, **`Gulp`** minify all images and icons and created images with webp format ([build](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/build)).
-
-All fonts you can find in [src/fonts](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/src/fonts) , **`Gulp`** converted all fonts from ttf format to woff2 & woff formats ([build/fonts](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/build/fonts)).
-
-All other files **`Gulp`** copy form [src](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/src) folder to [build](https://github.com/VladislavDesu/koroka-solutions-test/tree/master/build) folder.
-
-## Package.json
-
-This file contains of information about project and list of all packages [package.json](https://github.com/VladislavDesu/koroka-solutions-test/blob/master/package.json).
+- Gulpfile.js:
+  - Подключаются все файлы из папки gulp
