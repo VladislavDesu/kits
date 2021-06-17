@@ -1,6 +1,6 @@
 # Frontend starter template
 
-# Технологии
+## Технологии
 
 ```bash
 - BEM
