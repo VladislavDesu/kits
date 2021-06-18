@@ -35,5 +35,5 @@ module.exports = gulp.task("images", () => {
         }),
       ])
     )
-    .pipe(gulp.dest(path.build.images));
+    .pipe(gulp.dest(path.build.images.root));
 });

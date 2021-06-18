@@ -7,15 +7,23 @@ module.exports = {
     fonts: "dev/fonts/**/*.ttf",
   },
 
+  project: {
+    root: "./",
+  },
+
   server: {
-    baseDir: "./build",
+    baseDir: "./build/layout/",
   },
 
   build: {
     root: "build/",
     layout: "build/layout/",
     styles: "build/styles/",
-    images: "build/images/",
+    images: {
+      root: "build/images/",
+      src: "build/images/**/*.{png,jpg}",
+      webp: "build/images/webp/",
+    },
     scripts: "build/scripts/",
     fonts: "build/fonts/",
   },

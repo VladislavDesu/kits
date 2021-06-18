@@ -1,4 +1,8 @@
 module.exports = gulp.task(
   "default",
-  gulp.series("clean", "fonts", "images", "styles", "scripts", "layout")
+  gulp.series(
+    "clean",
+    gulp.parallel("fonts", "images", "styles", "scripts"),
+    "layout"
+  )
 );
