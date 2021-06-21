@@ -7,7 +7,7 @@
 // CSS - var(--variable)
 
 // FONT
-$ff-base: "Arial", sans-serif;
+$ff-base: "Nunito", "Arial", sans-serif;
 $fw-base: 400;
 $fs-base: normal;
 $fz-base: 16px;
@@ -31,14 +31,19 @@ $warm-100: #eae7dc !default;
 $warm-200: #d8c3a5 !default;
 $warm-300: #e98074 !default;
 $warm-400: #e85a4f !default;
-$dark: #8e9d9a !default;
-$black: #3c3c3c !default;
+$secondary: #8e9d9a !default;
+$dark: #3c3c3c !default;
 
 $theme-colors: (
   "warm-100": $warm-100,
   "warm-200": $warm-200,
   "warm-300": $warm-300,
   "warm-400": $warm-400,
+  "secondary": $secondary,
   "dark": $dark,
-  "black": $black,
 ) !default;
+
+// NAV
+
+$nav-link-color: $dark !default;
+$nav-link-hover-color: $warm-400 !default;
