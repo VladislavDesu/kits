@@ -47,6 +47,7 @@
     "htmlhint": "^0.15.1",
     "husky": "^6.0.0",
     "merge-stream": "^1.0.1",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.3.4",
     "stylelint": "^13.13.1",
     "stylelint-config-htmlacademy": "^0.1.10",
