@@ -106,6 +106,7 @@ npm run lint:js-fix    # Исправление только js файлов
 Для проверки кода на ошибки и соответствие код-гайдам используются конфиги [htmlacademy](https://github.com/htmlacademy/codeguide).
 
 `.eslintrc` - конфиг для проверки js [eslint](https://eslint.org/).
+`.eslintignore` - указаны папки и файлы, которые будут игнорироваться. [eslint](https://eslint.org/).
 
 <!-- `.eslintignore` - здесь указываются файлы/папки, которые будут игнорироваться.   -->
 
