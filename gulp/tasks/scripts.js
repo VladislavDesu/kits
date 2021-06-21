@@ -1,5 +1,3 @@
-const webpackConfig = require("../../webpack.config");
-
 module.exports = gulp.task("scripts", () => {
   return gulp
     .src(path.dev.scripts)

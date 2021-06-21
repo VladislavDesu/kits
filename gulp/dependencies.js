@@ -20,7 +20,6 @@ module.exports = [
   (cleanCSS = require("gulp-clean-css")),
   (plumber = require("gulp-plumber")),
   (sourcemaps = require("gulp-sourcemaps")),
-  (hash = require("gulp-hash")),
   (webpack = require("webpack-stream")),
   (mergeStream = require("merge-stream")),
   (fs = require("fs")),

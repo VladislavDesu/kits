@@ -16,7 +16,7 @@
     "build": "gulp",
     "prod": "gulp --prod",
     "webp": "gulp webp",
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint\""
+    "prepare": "husky install && husky add .husky/pre-commit \"npm run lint\""
   },
   "author": "Vladislav Gryadko (vgryadko@gmail.com)",
   "license": "ISC",
@@ -30,7 +30,6 @@
     "eslint-config-htmlacademy": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-hash": "^4.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",

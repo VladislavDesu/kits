@@ -1,3 +1,4 @@
+require("./gulp/functions");
 path = require("./gulp/path");
 webpackConfig = require("./webpack.config.js");
 require("./gulp/dependencies");

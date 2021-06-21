@@ -1,8 +1,6 @@
 module.exports = gulp.task("server", () => {
   browsersync.init({
-    server: {
-      baseDir: path.server.baseDir,
-    },
+    server: path.server.baseDir,
   });
 
   gulp

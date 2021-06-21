@@ -1,18 +1,14 @@
 module.exports = {
   dev: {
     layout: "dev/layout/**/*.+(pug|html)",
-    styles: "dev/styles/**/*.+(scss|sass|less)",
+    styles: "dev/styles/**/*.+(scss|sass|less|css)",
     images: "dev/images/**/*.{png,jpg,gif,svg}",
     scripts: "dev/scripts/**/*.js",
     fonts: "dev/fonts/**/*.ttf",
   },
 
-  project: {
-    root: "./",
-  },
-
   server: {
-    baseDir: "./build/layout/",
+    baseDir: "./build/",
   },
 
   build: {
