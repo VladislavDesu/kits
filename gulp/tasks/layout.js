@@ -1,6 +1,6 @@
 module.exports = gulp.task("layout", () => {
   return gulp
-    .src(path.dev.layout)
+    .src(path.dev.layout.src)
     .pipe(plumber())
     .pipe(gulpif(isPUG, pug({ pretty: true })))
     .pipe(
@@ -11,5 +11,5 @@ module.exports = gulp.task("layout", () => {
         })
       )
     )
-    .pipe(gulp.dest(path.build.layout));
+    .pipe(gulp.dest(path.build.root));
 });

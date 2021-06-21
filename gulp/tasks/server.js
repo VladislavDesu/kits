@@ -1,10 +1,10 @@
 module.exports = gulp.task("server", () => {
   browsersync.init({
-    server: path.server.baseDir,
+    server: path.build.root,
   });
 
   gulp
-    .watch(path.dev.layout, gulp.series("layout"))
+    .watch(path.dev.layout.root, gulp.series("layout"))
     .on("change", browsersync.reload);
   gulp
     .watch(path.dev.scripts, gulp.series("scripts"))
