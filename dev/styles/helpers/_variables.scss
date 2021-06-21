@@ -1,9 +1,3 @@
-// COLOR
-$f-color: #454858;
-$f-color-secondary: #4d4d4d;
-$active-color: #4ac983;
-$focus-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
-
 /*--------------------
   VARIABLES
 --------------------*/
@@ -13,10 +7,11 @@ $focus-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 // CSS - var(--variable)
 
 // FONT
-$f-family-base: "Ebrima", sans-serif;
-$f-weight-heading: 700;
-$f-size-xs: 16px;
-$f-size-lg: 18px;
+$ff-base: "Arial", sans-serif;
+$fw-base: 400;
+$fs-base: normal;
+$fz-base: 16px;
+$lh-base: 1.5;
 
 // MEDIA
 // min
@@ -31,12 +26,7 @@ $sm-max: 767px;
 $md-max: 991px;
 $lg-max: 1199px;
 
-// HEADER
-$header-height-xs: 46px;
-$header-height-lg: 70px;
-
 // COLORS
-
 $warm-100: #eae7dc !default;
 $warm-200: #d8c3a5 !default;
 $warm-300: #e98074 !default;
