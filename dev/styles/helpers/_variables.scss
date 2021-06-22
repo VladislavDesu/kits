@@ -6,6 +6,10 @@
 // SCSS, SASS - $
 // CSS - var(--variable)
 
+// COLOR
+$f-color: #454858;
+$f-color-secondary: #4d4d4d;
+
 // FONT
 $ff-base: "Nunito", "Arial", sans-serif;
 $fw-base: 400;
@@ -25,42 +29,3 @@ $xs-max: 575px;
 $sm-max: 767px;
 $md-max: 991px;
 $lg-max: 1199px;
-
-// COLORS
-$warm-100: #eae7dc !default;
-$warm-200: #d8c3a5 !default;
-$warm-300: #e98074 !default;
-$warm-400: #e85a4f !default;
-$secondary: #8e9d9a !default;
-$dark: #3c3c3c !default;
-
-$theme-colors: (
-  "warm-100": $warm-100,
-  "warm-200": $warm-200,
-  "warm-300": $warm-300,
-  "warm-400": $warm-400,
-  "secondary": $secondary,
-  "dark": $dark,
-) !default;
-
-// NAV
-
-$nav-link-color: $dark !default;
-$nav-link-hover-color: $warm-400 !default;
-
-// BREAKPOINTS
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-) !default;
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-) !default;
