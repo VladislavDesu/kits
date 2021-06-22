@@ -1,3 +1,7 @@
+/*--------------------
+  MAIN STYLES
+--------------------*/
+
 // HELPERS
 // Variables and mixins
 @import "helpers/variables";
@@ -25,5 +29,5 @@
 
 // MEDIA
 // Media queries of the layout (header, footer, and so on)
-@import "media/desktop/desktop";
-@import "media/mobile/mobile";
+@import "media/desktop";
+@import "media/mobile";
