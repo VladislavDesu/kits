@@ -3,13 +3,14 @@
   top: 0;
   right: 0;
   width: 250px;
+  height: 250px;
   background-color: $warm-400;
   border-bottom-left-radius: 250px;
-  height: 250px;
 
   &-toggler {
     top: 8px;
     right: 8px;
+
     &::before,
     &::after {
       content: "";
