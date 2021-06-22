@@ -1,23 +1,22 @@
 header.header
   .header__wrapper.position-relative
     .container
-      a.logo.position-absolute.top-50.start-50.translate-middle(href="#")
-        img.logo__img(src="#" alt="logo")
-      nav.header__nav.navbar.navbar-light.navbar-expand-lg
-        button.navbar-toggler.position-absolute.bg-warm-400.border-0(type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbarToggle" aria-controls="headerNavbarToggle" aria-expanded="true" aria-label="Toggle navigation")
-
-        ul.nav.text-center.w-100.collapse.show#headerNavbarToggle
-          li.nav-item.col-md-auto
+      //- a.logo.position-absolute.top-50.start-50.translate-middle(href="#")
+      //-   img(src="#" alt="logo")
+      nav.navbar.navbar-light.navbar-expand-lg.position-absolute.top-0.end-0
+        button.navbar-toggler.position-absolute.top-0.end-0.border-0.bg-warm-400(type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbarToggle" aria-controls="headerNavbarToggle" aria-expanded="true" aria-label="Toggle navigation")
+        ul.nav.text-center.collapse.show#headerNavbarToggle
+          li.nav-item
             a.nav-link(href="#") Link
-          li.nav-item.col-md-auto
+          li.nav-item
             a.nav-link(href="#") Link
-          li.nav-item.col-md-auto.me-auto
+          li.nav-item
             a.nav-link(href="#") Link
-          li.nav-item.col-md-auto
+          li.nav-item
             a.nav-link(href="#") Link
-          li.nav-item.col-md-auto
+          li.nav-item
             a.nav-link(href="#") Link
-          li.nav-item.col-md-auto
+          li.nav-item
             a.nav-link(href="#") Link
 
 
