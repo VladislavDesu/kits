@@ -7,6 +7,7 @@
 - Gulp
 - Pug, HTML
 - Scss, Sass, Less, Css
+- Bootstrap5
 - JavaScript
 ```
 
