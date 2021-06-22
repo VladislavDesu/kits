@@ -1,37 +1,23 @@
 header.header
   .container
     .header__wrapper
-
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-
-  nav.header__nav
-    ul.nav.text-center
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
-      li.nav-item.order-first.order-md-0.col-12.col-md-auto.mx-md-auto
-        a.nav-link(href="#")
-          img.logo(src="#" alt="logo")
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
-      li.nav-item.col-6.col-md-auto
-        a.nav-link(href="#") Link
+      nav.header__nav.navbar.navbar-expand-lg.navbar-light
+        button.navbar-toggler.navbar-light.position-absolute.end-0(type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbarToggle" aria-controls="headerNavbarToggle" aria-expanded="true" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        a.logo.position-absolute.top-50.start-50.translate-middle(href="#")
+          img.logo__img(src="#" alt="logo")
+        ul.nav.text-center.w-10.collapse.show#headerNavbarToggle
+          li.nav-item.col-md-auto
+            a.nav-link(href="#") Link
+          li.nav-item.col-md-auto
+            a.nav-link(href="#") Link
+          li.nav-item.col-md-auto.me-auto
+            a.nav-link(href="#") Link
+          li.nav-item.col-md-auto
+            a.nav-link(href="#") Link
+          li.nav-item.col-md-auto
+            a.nav-link(href="#") Link
+          li.nav-item.col-md-auto
+            a.nav-link(href="#") Link
 
 
