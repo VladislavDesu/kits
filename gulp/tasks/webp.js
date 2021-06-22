@@ -7,5 +7,6 @@ module.exports = gulp.task("webp", () => {
         method: 6,
       })
     )
-    .pipe(gulp.dest(path.build.images.webp));
+    .pipe(gulp.dest(path.build.images.webp))
+    .pipe(browsersync.stream());
 });

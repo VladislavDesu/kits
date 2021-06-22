@@ -35,5 +35,6 @@ module.exports = gulp.task("images", () => {
         }),
       ])
     )
-    .pipe(gulp.dest(path.build.images.root));
+    .pipe(gulp.dest(path.build.images.root))
+    .pipe(browsersync.stream());
 });

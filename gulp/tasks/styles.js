@@ -38,5 +38,6 @@ module.exports = gulp.task("styles", () => {
       })
     )
     .pipe(gulpif(!argv.prod, sourcemaps.write("")))
-    .pipe(gulp.dest(path.build.styles));
+    .pipe(gulp.dest(path.build.styles))
+    .pipe(browsersync.stream());
 });
