@@ -1,11 +1,11 @@
 header.header
-  .container
-    .header__wrapper
-      nav.header__nav.navbar.navbar-expand-lg.navbar-light
-        button.navbar-toggler.navbar-light.position-absolute.end-0(type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbarToggle" aria-controls="headerNavbarToggle" aria-expanded="true" aria-label="Toggle navigation")
-          span.navbar-toggler-icon
-        a.logo.position-absolute.top-50.start-50.translate-middle(href="#")
-          img.logo__img(src="#" alt="logo")
+  .header__wrapper.position-relative
+    .container
+      a.logo.position-absolute.top-50.start-50.translate-middle(href="#")
+        img.logo__img(src="#" alt="logo")
+      nav.header__nav.navbar.navbar-light.navbar-expand-lg
+        button.navbar-toggler.position-absolute.bg-warm-400.border-0(type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbarToggle" aria-controls="headerNavbarToggle" aria-expanded="true" aria-label="Toggle navigation")
+
         ul.nav.text-center.w-100.collapse.show#headerNavbarToggle
           li.nav-item.col-md-auto
             a.nav-link(href="#") Link
