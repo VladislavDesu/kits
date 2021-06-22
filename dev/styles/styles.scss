@@ -2,11 +2,12 @@
 // Variables and mixins
 @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/utilities";
 
 // LIBS
 // external libraries
-@import "libs/bootstrap";
+@import "libs/bootstrap/variables";
+@import "libs/bootstrap/utilities";
+@import "libs/bootstrap/bootstrap";
 
 // BASE
 // Base styles

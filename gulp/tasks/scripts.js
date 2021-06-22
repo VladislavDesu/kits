@@ -1,5 +1,5 @@
 module.exports = gulp.task("scripts", () => {
-  return (
+  return mergeStream(
     gulp
       .src(path.dev.scripts)
       // .pipe(webpack(webpackConfig))
@@ -9,6 +9,10 @@ module.exports = gulp.task("scripts", () => {
           suffix: ".min",
         })
       )
+      .pipe(gulp.dest(path.build.scripts)),
+    gulp
+      .src("vendor/bootstrap/js/bootstrap.min.js")
+      // .pipe(webpack(webpackConfig))
       .pipe(gulp.dest(path.build.scripts))
   );
 });
