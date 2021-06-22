@@ -3,12 +3,15 @@
 --------------------*/
 
 // COLORS
+
 $warm-100: #eae7dc !default;
 $warm-200: #d8c3a5 !default;
 $warm-300: #e98074 !default;
 $warm-400: #e85a4f !default;
 $secondary: #8e9d9a !default;
 $dark: #3c3c3c !default;
+$white: #ffffff !default;
+$black: #000000 !default;
 
 $theme-colors: (
   "warm-100": $warm-100,
@@ -40,3 +43,27 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
 ) !default;
+
+// NAVBAR
+
+$navbar-toggler-padding-y: 0.5rem !default;
+$navbar-toggler-padding-x: 0.5rem !default;
+$navbar-toggler-font-size: 1rem !default;
+$navbar-toggler-border-radius: 50% !default;
+
+$navbar-dark-color: rgba($white, 0.55) !default;
+$navbar-dark-hover-color: rgba($white, 0.75) !default;
+$navbar-dark-active-color: $white !default;
+$navbar-dark-disabled-color: rgba($white, 0.25) !default;
+$navbar-dark-toggler-border-color: rgba($white, 0.1) !default;
+
+$navbar-light-color: $white !default;
+$navbar-light-hover-color: rgba($black, 0.7) !default;
+$navbar-light-active-color: rgba($black, 0.9) !default;
+$navbar-light-disabled-color: rgba($black, 0.3) !default;
+$navbar-light-toggler-border-color: rgba($black, 0.1) !default;
+
+// $navbar-light-brand-color: $navbar-light-active-color;
+// $navbar-light-brand-hover-color: $navbar-light-active-color;
+// $navbar-dark-brand-color: $navbar-dark-active-color;
+// $navbar-dark-brand-hover-color: $navbar-dark-active-color;
