@@ -15,6 +15,11 @@ module.exports = gulp.task("scripts", () => {
       .src("vendor/bootstrap/js/bootstrap.min.js")
       // .pipe(webpack(webpackConfig))
       .pipe(gulp.dest(path.build.scripts))
+      .pipe(browsersync.stream()),
+    gulp
+      .src("vendor/jquery/js/jquery.min.js")
+      // .pipe(webpack(webpackConfig))
+      .pipe(gulp.dest(path.build.scripts))
       .pipe(browsersync.stream())
   );
 });
