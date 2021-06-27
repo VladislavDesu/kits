@@ -9,7 +9,7 @@ module.exports = gulp.task("vendor", () => {
     .pipe(gulp.dest("./vendor/bootstrap/scss"));
   // Jquery JS
   const jqueryJS = gulp
-    .src("./node_modules/jquery/dist/")
+    .src("./node_modules/jquery/dist/**/*")
     .pipe(gulp.dest("./vendor/jquery/"));
 
   return mergeStream(bootstrapJS, bootstrapSCSS, jqueryJS);
