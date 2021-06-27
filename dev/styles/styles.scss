@@ -1,11 +1,17 @@
+/*--------------------
+  MAIN STYLES
+--------------------*/
+
 // HELPERS
 // Variables and mixins
-@import "helpers/_variables";
-@import "helpers/_mixins";
+@import "helpers/variables";
+@import "helpers/mixins";
 
 // LIBS
 // external libraries
-@import "libs/bootstrap";
+@import "libs/bootstrap/variables";
+@import "libs/bootstrap/utilities";
+@import "libs/bootstrap/bootstrap";
 
 // BASE
 // Base styles
@@ -23,5 +29,5 @@
 
 // MEDIA
 // Media queries of the layout (header, footer, and so on)
-@import "media/desktop/desktop";
-@import "media/mobile/mobile";
+@import "media/desktop";
+@import "media/mobile";

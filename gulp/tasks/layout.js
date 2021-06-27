@@ -11,5 +11,6 @@ module.exports = gulp.task("layout", () => {
         })
       )
     )
-    .pipe(gulp.dest(path.build.root));
+    .pipe(gulp.dest(path.build.root))
+    .pipe(browsersync.stream());
 });
