@@ -10,7 +10,7 @@ module.exports = gulp.task("vendor", () => {
   // Jquery JS
   const jqueryJS = gulp
     .src("./node_modules/jquery/dist/**/*")
-    .pipe(gulp.dest("./vendor/jquery/"));
+    .pipe(gulp.dest("./dev/scripts/vendor/jquery/"));
 
   return mergeStream(bootstrapJS, bootstrapSCSS, jqueryJS);
 });
