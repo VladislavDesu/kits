@@ -1,9 +1,9 @@
 import $ from "jquery";
 import "slick-slider";
 
-$(".slider").slick({
+$(`.slider`).slick({
   centerMode: true,
-  centerPadding: "60px",
+  centerPadding: `60px`,
   slidesToShow: 3,
   responsive: [
     {
@@ -11,7 +11,7 @@ $(".slider").slick({
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: "40px",
+        centerPadding: `40px`,
         slidesToShow: 3,
       },
     },
@@ -20,7 +20,7 @@ $(".slider").slick({
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: "40px",
+        centerPadding: `40px`,
         slidesToShow: 1,
       },
     },
