@@ -17,7 +17,7 @@ module.exports = gulp.task("scripts", () => {
       .pipe(gulp.dest(path.build.scripts))
       .pipe(browsersync.stream()),
     gulp
-      .src("vendor/jquery/js/jquery.min.js")
+      .src("vendor/jquery/jquery.min.js")
       // .pipe(webpack(webpackConfig))
       .pipe(gulp.dest(path.build.scripts))
       .pipe(browsersync.stream())
