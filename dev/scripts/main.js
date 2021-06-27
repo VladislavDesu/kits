@@ -1,7 +1,4 @@
-const headerNavToggle = document.querySelector(`.header .navbar-toggler`);
-const headerNavbar = document.querySelector(`.header .navbar`);
+// import $ from "jquery";
+// // import "slick-slider";
 
-headerNavToggle.addEventListener(`click`, () => {
-  headerNavbar.classList.toggle(`navbar--open`);
-  headerNavbar.classList.toggle(`jello`);
-});
+// $(`.header`).addClass(`.red`);
