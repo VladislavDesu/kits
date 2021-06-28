@@ -7,4 +7,5 @@ package-lock.json
 *.rar
 *.zip
 .husky/
-vendor/
+dev/styles/vendor/
+dev/scripts/vendor/
