@@ -3,7 +3,10 @@ module.exports = gulp.task(
   gulp.series(
     "clean",
     "vendor",
-    gulp.parallel("fonts", "images", "styles", "scripts"),
+    "fonts",
+    "images",
+    "styles",
+    "scripts",
     "layout",
     "server"
   )
