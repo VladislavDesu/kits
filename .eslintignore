@@ -3,4 +3,3 @@ node_modules/
 webpack.config.js
 gulpfile.js
 build/scripts/
-dev/scripts/vendor/

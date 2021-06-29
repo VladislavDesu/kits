@@ -8,7 +8,6 @@ module.exports = [
   (imagemin = require("gulp-imagemin")),
   (webp = require("gulp-webp")),
   (rename = require("gulp-rename")),
-  (uglify = require("gulp-uglify")),
   (browsersync = require("browser-sync")),
   (gulpif = require("gulp-if")),
   (argv = require("yargs").argv),
@@ -22,5 +21,5 @@ module.exports = [
   (sourcemaps = require("gulp-sourcemaps")),
   (webpack = require("webpack-stream")),
   (mergeStream = require("merge-stream")),
-  (fs = require("fs")),
+  (uglify = require("gulp-uglify")),
 ];

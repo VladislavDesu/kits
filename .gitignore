@@ -1,5 +1,5 @@
 design/
-build/*
+build/
 node_modules/
 package-lock.json
 .vscode/
@@ -7,5 +7,3 @@ package-lock.json
 *.rar
 *.zip
 .husky/
-dev/styles/vendor/
-dev/scripts/vendor/
