@@ -32,22 +32,6 @@
       margin: 0 auto;
     }
   }
-
-  &-prev {
-    left: 0;
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-  }
-
-  &-next {
-    right: 0;
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(-135deg);
-    }
-  }
 }
 
 .slick-arrow {
@@ -81,5 +65,21 @@
     &::before {
       border-color: $secondary;
     }
+  }
+}
+
+.slick-prev {
+  left: 0;
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.slick-next {
+  right: 0;
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
   }
 }
