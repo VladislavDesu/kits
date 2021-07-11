@@ -33,37 +33,6 @@
     }
   }
 
-  &-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    font-size: 0;
-    background-color: transparent;
-    border: none;
-    transform: translateY(-50%);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 15px;
-      height: 15px;
-      border-bottom: 2px solid $white;
-      border-left: 2px solid $white;
-      transform: translate(-50%, -50%);
-      transition: border-color 0.15s linear;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: $secondary;
-    }
-  }
-
   &-prev {
     left: 0;
 
@@ -77,6 +46,40 @@
 
     &::before {
       transform: translate(-50%, -50%) rotate(-135deg);
+    }
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transform: translateY(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid $white;
+    border-left: 2px solid $white;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.15s linear;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $secondary;
     }
   }
 }

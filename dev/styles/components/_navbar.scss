@@ -5,28 +5,35 @@
 .navbar {
   &-brand {
     font-family: "Logo", "Times New Roman", serif;
+    outline: none;
+    transition: transform 0.15s linear;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.nav-link {
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 0.4rem;
+    width: 0;
+    height: 2px;
+    background-color: $secondary;
+    transition: width 0.15s linear;
   }
 
-  .nav-link {
-    outline: none;
-
+  &:hover,
+  &:focus:not(.disabled),
+  &.active {
     &::before {
-      content: "";
-      position: absolute;
-      right: 1rem;
-      bottom: 0.4rem;
-      width: 0;
-      height: 2px;
-      background-color: $secondary;
-      transition: width 0.15s linear;
+      width: calc(100% - 1.5rem);
     }
-
-    //   &:hover,
-    //   &:focus:not(.disabled),
-    //   &.active {
-    //     &::before {
-    //       width: calc(100% - 1.5rem);
-    //     }
-    //   }
   }
 }
