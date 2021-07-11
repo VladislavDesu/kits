@@ -21,12 +21,12 @@
       transition: width 0.15s linear;
     }
 
-    &:hover,
-    &:focus:not(.disabled),
-    &.active {
-      // &::before {
-      //   width: calc(100% - 1.5rem);
-      // }
-    }
+    //   &:hover,
+    //   &:focus:not(.disabled),
+    //   &.active {
+    //     &::before {
+    //       width: calc(100% - 1.5rem);
+    //     }
+    //   }
   }
 }
