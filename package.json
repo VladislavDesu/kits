@@ -10,7 +10,7 @@
     "lint:style-fix": "stylelint \"dev/styles/**/*\" --syntax=scss --fix",
     "lint:js": "eslint dev/scripts/**/*.js",
     "lint:js-fix": "eslint dev/scripts/**/*.js --fix",
-    "lint:html": "npx htmlhint \"build/layout/**/*.html\"",
+    "lint:html": "npx htmlhint \"build/*.html\"",
     "csscomb": "csscomb build/styles/*.css",
     "start": "gulp && webpack && gulp server",
     "build": "gulp && webpack",
