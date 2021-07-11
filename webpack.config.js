@@ -7,6 +7,8 @@ module.exports = {
   entry: {
     main: "./dev/scripts/main.js",
     bootstrap: "bootstrap",
+    jquery: "jquery",
+    slider: "slick-slider",
   },
   output: {
     path: path.resolve(__dirname, "build/scripts/"),

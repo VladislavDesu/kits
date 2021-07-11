@@ -1,0 +1,117 @@
+/*--------------------
+  SLIDER
+--------------------*/
+
+.slick {
+  &-dots {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    @include size(100%, auto);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    list-style-type: none;
+
+    li {
+      flex-grow: 1;
+    }
+
+    button {
+      position: relative;
+      display: block;
+      @include size(100%, 50px);
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      font-size: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include size(100%, 2px);
+        background-color: $secondary;
+        transition: background 0.15s linear;
+        transform: translateY(-50%);
+      }
+    }
+
+    .slick-active {
+      ~ li {
+        button {
+          &::before {
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &-slider {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &-slide {
+    img {
+      margin: 0 auto;
+    }
+
+    li {
+      display: block !important;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    transform: translateY(-50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: translate(-50%, -50%);
+      transition: border-color 0.15s linear;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: $secondary;
+      }
+    }
+  }
+
+  &-prev {
+    left: 0;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &-next {
+    right: 0;
+    &::before {
+      transform: translate(-50%, -50%) rotate(-135deg);
+    }
+  }
+}

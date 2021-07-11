@@ -1,19 +1,27 @@
-header.header
+header#header.position-absolute.w-100
   .container
-    .d-flex.justify-content-between.py-4.header__wrapper
-      a.logo(href="#")
-        img(src="#" alt="logo")
-      nav.nav
-        ul.list-unstyled.d-flex.mb-0.nav__list
-          li.px-3.nav__item
-            a.nav__link(href="#") About me
-          li.px-3.nav__item
-            a.nav__link(href="#") Skills
-          li.px-3.nav__item
-            a.nav__link(href="#") Projects
-          li.px-3.nav__item
-            a.nav__link(href="#") Contacts
-          li.px-3.nav__item
-            a.nav__link(href="#") Resume
+    nav.navbar.navbar-dark.bg-dark.navbar-expand-md
+      a.navbar-brand(href="index.html") VGryadko
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse.justify-content-end
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.position-relative(href="#home") Home
+          li.nav-item
+            a.nav-link.position-relative(href="#about") About
+          li.nav-item
+            a.nav-link.position-relative(href="#experiences") Experiences
+          li.nav-item
+            a.nav-link.position-relative(href="#skills") Skills
+          li.nav-item
+            a.nav-link.position-relative(href="#portfolio") Portfolio
+          li.nav-item
+            a.nav-link.position-relative(href="#contact") Contact
+          li.nav-item
+            a.nav-link.position-relative(href="#blog") Blog
+
+
+
 
 

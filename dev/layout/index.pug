@@ -4,9 +4,11 @@ block variables
   - var title = "Главная страница";
   - var lang = "ru-RU";
   - var styles = "styles/styles.min.css";
+  - var stylesSlider = "styles/libs/slider/slick-slider.min.css";
   - var description = "";
   - var author = "";
   - var keywords = "";
+  - var secondary = "#44cf6c";
 
 block content
   include content/index
@@ -14,6 +16,9 @@ block content
 block script
   script(type="module" src="scripts/bootstrap.bundle.js")
   script(type="module" src="scripts/vendors~bootstrap.bundle.js")
+
+  script(type="module" src="scripts/vendors~main~slider.bundle.js")
+  script(type="module" src="scripts/vendors~jquery~main~slider.bundle.js")
 
   script(type="module" src="scripts/main.bundle.js")
 

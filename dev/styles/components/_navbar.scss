@@ -1,0 +1,32 @@
+/*--------------------
+  NAVBAR
+--------------------*/
+
+.navbar {
+  &-brand {
+    font-family: "Logo";
+  }
+
+  .nav-link {
+    outline: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0.4rem;
+      right: 1rem;
+      width: 0;
+      height: 2px;
+      background-color: $secondary;
+      transition: width 0.15s linear;
+    }
+
+    &:hover,
+    &:focus:not(.disabled),
+    &.active {
+      &::before {
+        width: calc(100% - 1.5rem);
+      }
+    }
+  }
+}

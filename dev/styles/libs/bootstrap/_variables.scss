@@ -4,12 +4,13 @@
 
 // COLORS
 
-$primary: #4d519d !default;
-$secondary: #2274a5 !default;
+$primary: #2274a5 !default;
+$secondary: #44cf6c !default;
 $white: #ffffff !default;
 $light: #fbfdfc !default;
 $black: #000000 !default;
-$dark: #1a181b !default;
+$dark: #100e17 !default;
+$gray: #202026 !default;
 
 $theme-colors: (
   "primary": $primary,
@@ -19,3 +20,22 @@ $theme-colors: (
   "black": $black,
   "dark": $dark,
 ) !default;
+
+$headings-font-weight: 700 !default;
+
+$navbar-padding-y: 1rem !default;
+$navbar-nav-link-padding-x: 1rem !default;
+$navbar-dark-color: $white !default;
+$navbar-dark-hover-color: $secondary !default;
+$navbar-dark-active-color: $secondary !default;
+$navbar-brand-font-size: 2rem !default;
+//
+$navbar-dark-disabled-color: rgba($white, 0.6) !default;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 11h22M4 17h11M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-border-color: none !default;
+
+$card-spacer-y: 1.5rem !default;
+$card-spacer-x: 1.5rem !default;
+$card-title-spacer-y: 1rem !default;
+$card-color: $white !default;
+$card-bg: $gray !default;
