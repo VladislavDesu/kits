@@ -3,14 +3,10 @@ module.exports = gulp.task("styles", () => {
     .src(path.dev.styles)
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
     .pipe(plumber())
-    .pipe(gulpif(isLESS, less()))
     .pipe(
-      gulpif(
-        isSASS,
-        sass({
-          outputStyle: "expanded",
-        }).on("error", sass.logError)
-      )
+      sass({
+        outputStyle: "expanded",
+      }).on("error", sass.logError)
     )
     .pipe(
       postcss([
@@ -22,16 +18,7 @@ module.exports = gulp.task("styles", () => {
         }),
       ])
     )
-    .pipe(
-      gulpif(
-        argv.prod,
-        cleanCSS((details) => {
-          console.log(
-            `${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`
-          );
-        })
-      )
-    )
+    .pipe(gulpif(argv.prod, cleanCSS()))
     .pipe(
       rename({
         suffix: ".min",

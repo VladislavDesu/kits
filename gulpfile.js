@@ -1,8 +1,8 @@
-require("./gulp/functions");
 path = require("./gulp/path");
 webpackConfig = require("./webpack.config.js");
 require("./gulp/dependencies");
 require("./gulp/tasks/clean");
+require("./gulp/tasks/copy");
 require("./gulp/tasks/fonts");
 require("./gulp/tasks/images");
 require("./gulp/tasks/webp");

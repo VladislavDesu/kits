@@ -12,7 +12,6 @@ module.exports = [
   (gulpif = require("gulp-if")),
   (argv = require("yargs").argv),
   (sass = require("gulp-sass")),
-  (less = require("gulp-less")),
   (postcss = require("gulp-postcss")),
   (autoprefixer = require("autoprefixer")),
   (mqpacker = require("css-mqpacker")),
