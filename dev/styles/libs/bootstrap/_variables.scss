@@ -39,3 +39,20 @@ $card-spacer-x: 1.5rem !default;
 $card-title-spacer-y: 1rem !default;
 $card-color: $white !default;
 $card-bg: $gray !default;
+
+$btn-close-color: $white !default;
+$btn-close-opacity: 1 !default;
+$btn-close-hover-opacity: 0.8 !default;
+$btn-close-focus-opacity: 0.8 !default;
+
+$modal-inner-padding: 2rem !default;
+$modal-content-color: $white !default;
+$modal-content-bg: $gray !default;
+$modal-content-border-width: 0 !default;
+$modal-backdrop-bg: $dark !default;
+$modal-backdrop-opacity: 0.6 !default;
+
+$modal-sm: 300px;
+$modal-md: 600px;
+$modal-lg: 800px;
+$modal-xl: 1140px;

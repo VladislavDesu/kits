@@ -1,119 +1,82 @@
-// /*--------------------
-//   SLIDER
-// --------------------*/
+/*--------------------
+  SLIDER
+--------------------*/
 
-// .slick {
-//   &-dots {
-//     position: absolute;
-//     right: 0;
-//     bottom: -30px;
-//     display: flex;
-//     flex-direction: row-reverse;
-//     margin: 0;
-//     padding: 0;
-//     list-style-type: none;
-//     direction: rtl;
+.slick {
+  &-dots {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    direction: rtl;
 
-//     @include size(100%, auto);
+    @include size(100%, auto);
 
-//     li {
-//       flex-grow: 1;
-//     }
+    li {
+      flex-grow: 1;
+    }
+  }
 
-//     button {
-//       position: relative;
-//       display: block;
-//       padding: 0;
-//       font-size: 0;
-//       background-color: transparent;
-//       border: none;
+  &-slider {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 
-//       @include size(100%, 50px);
+  &-slide {
+    img {
+      margin: 0 auto;
+    }
+  }
 
-//       &::before {
-//         content: "";
-//         position: absolute;
-//         top: 50%;
-//         left: 0;
-//         background-color: $secondary;
-//         transform: translateY(-50%);
-//         transition: background 0.15s linear;
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    transform: translateY(-50%);
 
-//         @include size(100%, 2px);
-//       }
-//     }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      transform: translate(-50%, -50%);
+      transition: border-color 0.15s linear;
+    }
 
-//     .slick-active {
-//       ~ li {
-//         button {
-//           &::before {
-//             background-color: $white;
-//           }
-//         }
-//       }
-//     }
-//   }
+    &:hover,
+    &:focus {
+      border-color: $secondary;
+    }
+  }
 
-//   &-slider {
-//     margin: 0;
-//     padding: 0;
-//     list-style-type: none;
-//   }
+  &-prev {
+    left: 0;
 
-//   &-slide {
-//     img {
-//       margin: 0 auto;
-//     }
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
 
-//     // li {
-//     //   display: block !important;
-//     // }
-//   }
+  &-next {
+    right: 0;
 
-//   &-arrow {
-//     position: absolute;
-//     top: 50%;
-//     z-index: 1;
-//     width: 30px;
-//     height: 30px;
-//     padding: 0;
-//     font-size: 0;
-//     background-color: transparent;
-//     border: none;
-//     transform: translateY(-50%);
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       width: 15px;
-//       height: 15px;
-//       border-bottom: 2px solid $white;
-//       border-left: 2px solid $white;
-//       transform: translate(-50%, -50%);
-//       transition: border-color 0.15s linear;
-//     }
-
-//     &:hover,
-//     &:focus {
-//       border-color: $secondary;
-//     }
-//   }
-
-//   &-prev {
-//     left: 0;
-
-//     &::before {
-//       transform: translate(-50%, -50%) rotate(45deg);
-//     }
-//   }
-
-//   &-next {
-//     right: 0;
-
-//     &::before {
-//       transform: translate(-50%, -50%) rotate(-135deg);
-//     }
-//   }
-// }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-135deg);
+    }
+  }
+}
