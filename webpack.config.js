@@ -6,7 +6,6 @@ module.exports = {
   mode: "development",
   entry: {
     main: "./dev/scripts/main.js",
-    bootstrap: "bootstrap",
   },
   output: {
     path: path.resolve(__dirname, "build/scripts/"),

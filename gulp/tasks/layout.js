@@ -2,7 +2,7 @@ module.exports = gulp.task("layout", () => {
   return gulp
     .src(path.dev.layout.src)
     .pipe(plumber())
-    .pipe(gulpif(isPUG, pug({ pretty: true })))
+    .pipe(pug({ pretty: true }))
     .pipe(
       gulpif(
         argv.prod,

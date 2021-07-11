@@ -1,5 +1,6 @@
 module.exports = {
   dev: {
+    root: "dev/**/*",
     layout: {
       src: "dev/layout/*.+(pug|html)",
       root: "dev/layout/",
