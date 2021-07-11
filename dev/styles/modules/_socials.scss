@@ -13,9 +13,9 @@
 
   &__link {
     color: $white;
-    fill: $white;
     outline: none;
     transition: color 0.15s linear, fill 0.15s linear;
+    fill: $white;
 
     &--text-none {
       font-size: 0;
