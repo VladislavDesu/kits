@@ -4,42 +4,9 @@ section#skills.py-5
       li.col-6
         h2.mb-5.text-center Technical Skills
         ul.slider
-          li
-            img(src="images/skills/html.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/css.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/js.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/bootstrap.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/gulp.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/webpack.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/pug.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/less.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/sass.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/jquery.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/react.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/redux.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/git.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/npm.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/bem.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/visual-studio-code.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/figma.svg", width="80px" height="80px" alt="")
-          li
-            img(src="images/skills/photoshop.svg", width="80px" height="80px" alt="")
+          each skill, index in skillsList
+            li
+              img(src=skill.src, width="80px" height="80px" alt=skill.name)
       li.col-6
         h2.mb-5.text-center Professional Skills
         ul.list-unstyled.mb-0

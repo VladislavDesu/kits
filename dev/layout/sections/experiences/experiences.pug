@@ -14,39 +14,13 @@ section#experiences.py-5
       li.col-6
         h2.mb-5 Work Experience
         ul.list-unstyled.mb-0
-          li.card.mb-4
-            .card-body
-              h4.card-title.mb-4 Frontend Developer at
-                span.text-secondary  RexIT
-              p.card-text.text-secondary May 2021 - Present (Full-time)
-              p.card-text.mb-0 Responsibility :
-              ul.list-unstyled.mb-0.d-flex.flex-wrap
-                li.position-relative.ps-4.w-50 Validity HTML
-                li.position-relative.ps-4.w-50 Pug (Jade)
-                li.position-relative.ps-4.w-50 CSS, SASS, SCSS
-                li.position-relative.ps-4.w-50 Adaptive &amp; Responsive sites
-                li.position-relative.ps-4.w-50 Mobile &amp; Desktop first
-                li.position-relative.ps-4.w-50 Pixelperfect
-                li.position-relative.ps-4.w-50 BEM Methodology
-                li.position-relative.ps-4.w-50 Create PDF files
-                li.position-relative.ps-4.w-50 Bootstrap 5 Theme (CRM)
-                li.position-relative.ps-4.w-50 Slick slider
-                li.position-relative.ps-4.w-50 chartJS
-                li.position-relative.ps-4.w-50 jQuery, jQuery UI
-                li.position-relative.ps-4.w-50 React &amp; Redux Development
-          li.card
-            .card-body
-              h4.card-title.mb-4 Frontend Developer at
-                span.text-secondary  Smart Plus
-              p.card-text.text-secondary May 2021 - Present (Freelance)
-              p.card-text.mb-0 Responsibility :
-              ul.list-unstyled.mb-0.d-flex.flex-wrap
-                li.position-relative.ps-4.w-50 Validity HTML
-                li.position-relative.ps-4.w-50 CSS, LESS
-                li.position-relative.ps-4.w-50 Adaptive &amp; Responsive sites
-                li.position-relative.ps-4.w-50 Mobile &amp; Desktop first
-                li.position-relative.ps-4.w-50 Pixelperfect
-                li.position-relative.ps-4.w-50 BEM Methodology
-                li.position-relative.ps-4.w-50 Native Javascript code
-                li.position-relative.ps-4.w-50 Support Legacy code
-                li.position-relative.ps-4.w-50 Site Optimization
+          each experience, index in experiencesList
+            li.card.mb-4
+              .card-body
+                h4.card-title.mb-4= experience.position
+                  span.text-secondary= experience.company
+                p.card-text.text-secondary= experience.date
+                p.card-text.mb-0 Responsibility :
+                ul.list-unstyled.mb-0.d-flex.flex-wrap
+                  each item, index in experience.list
+                    li.position-relative.ps-4.w-50= item
